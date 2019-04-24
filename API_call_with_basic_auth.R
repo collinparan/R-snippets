@@ -17,7 +17,7 @@ auth <- fromJSON(raw_auth)
 token <- auth$access_token
 
 #GET data
-url <- "https://tectonic.looker.com/api/"
+url <- "https://example.com/api/"
 req <- httr::GET(url, httr::add_headers(Authorization = paste("Bearer", token, sep = " ")))
 json <- httr::content(req, as = "text")
 data <- fromJSON(json)
